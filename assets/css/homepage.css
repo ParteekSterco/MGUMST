@@ -32,6 +32,7 @@
 .slider_caption p {
    font-weight: 500;
    color: var(--bs-black);
+   margin-bottom: 0;
    clip-path: polygon(0 100%, 0 100%, 0 0, 0 0);
 }
 
