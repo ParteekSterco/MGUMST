@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="33" height="33" viewBox="0 0 33 33">
+  <defs>
+    <filter id="Icon_ionic-md-mail" x="3.074" y="6.351" width="27.836" height="23.8" filterUnits="userSpaceOnUse">
+      <feOffset dy="2" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="1.5" result="blur"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="Group_1118" data-name="Group 1118" transform="translate(-0.076 -0.074)">
+    <circle id="Ellipse_16" data-name="Ellipse 16" cx="16.5" cy="16.5" r="16.5" transform="translate(0.076 0.074)" fill="#d93e3e"/>
+    <g transform="matrix(1, 0, 0, 1, 0.08, 0.07)" filter="url(#Icon_ionic-md-mail)">
+      <path id="Icon_ionic-md-mail-2" data-name="Icon ionic-md-mail" d="M19.292,5.625H4.044A1.8,1.8,0,0,0,2.25,7.419V18.631a1.8,1.8,0,0,0,1.794,1.794H19.292a1.8,1.8,0,0,0,1.794-1.794V7.419A1.8,1.8,0,0,0,19.292,5.625Zm-.224,3.812-7.4,4.933-7.4-4.933V7.643l7.4,4.933,7.4-4.933Z" transform="translate(5.32 3.23)" fill="#fff"/>
+    </g>
+  </g>
+</svg>

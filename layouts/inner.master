@@ -1,0 +1,119 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="inner.master.cs" Inherits="layouts_inner" %>
+
+<!DOCTYPE html>
+<%@ Register Src="~/usercontrols/mainmenu.ascx" TagName="mainmenu" TagPrefix="uc1" %>
+<%@ Register Src="~/usercontrols/hamburger.ascx" TagName="hamburger" TagPrefix="uc2" %>
+<%@ Register Src="~/usercontrols/search.ascx" TagName="search" TagPrefix="uc3" %>
+<%@ Register Src="~/usercontrols/footer.ascx" TagName="footer" TagPrefix="uc5" %>
+<%@ Register Src="~/usercontrols/mobilemenu.ascx" TagName="mobilemenu" TagPrefix="uc6" %>
+<%@ Register Src="~/usercontrols/seosection.ascx" TagName="seosection" TagPrefix="uc7" %>
+<%@ Register Src="~/usercontrols/rightmenu.ascx" TagName="rightmenu" TagPrefix="ucr" %>
+<html>
+<head runat="server">
+    <title></title>
+    <uc7:seosection ID="seosection1" runat="server" />
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link type="text/css" href="/assets/css/inner.css" rel="stylesheet">
+    <link type="text/css" href="/assets/css/responsive.css" rel="stylesheet">
+
+    <link href="/assets/css/dynamic.css" rel="stylesheet" />
+</head>
+<body>
+    <form id="form1" runat="server">
+        <asp:ScriptManager ID="ScriptManager1" runat="server" ScriptMode="Release">
+            <CompositeScript>
+                <Scripts>
+                    <asp:ScriptReference Name="MicrosoftAjax.js" />
+                    <asp:ScriptReference Name="MicrosoftAjaxWebForms.js" />
+                    <asp:ScriptReference Name="Common.Common.js" Assembly="AjaxControlToolkit" />
+                </Scripts>
+            </CompositeScript>
+        </asp:ScriptManager>
+        <uc1:mainmenu ID="mainmenu" runat="server" />
+        <div class="sideMenu_btns">
+            <button class="js-hamburger btn" type="button">
+                <span class="bi bi-list bars"></span>
+            </button>
+            <a href="#" class="btn"><i class="bi bi-info-circle"></i></a>
+            <button class="search_hamburger btn" type="button">
+                <span class="bi bi-search srch"></span>
+            </button>
+            <a href="#" class="btn"><i class="bi bi-person"></i></a>
+        </div>
+        <uc2:hamburger ID="hamburger1" runat="server" />
+        <uc3:search ID="search1" runat="server" />
+        <div class="inner_menu">
+            <div class="container-fluid">
+                <h6 class="manu_title" id="panelinnermenu" runat="server" visible="false">
+                    <a id="a1" runat="server">
+                        <asp:Literal ID="littitlename" runat="server"></asp:Literal></a>
+                </h6>
+                <div class="manu_list">
+                    <ul id="ulinnermenu" runat="server" visible="false">
+                        <asp:Repeater ID="rptinnermenu" runat="server" OnItemDataBound="rptinnermenu_ItemDataBound">
+                            <ItemTemplate>
+                                <asp:Literal ID="litpageid" runat="server" Visible="false" Text='<%#Eval("pageid")%>'></asp:Literal>
+                                <asp:Literal ID="litpageurl" runat="server" Visible="false" Text='<%#Eval("pageurl")%>'></asp:Literal>
+                                <asp:Literal ID="litrewriteurl" runat="server" Visible="false" Text='<%#Eval("rewriteurl")%>'></asp:Literal>
+                                <asp:Literal ID="litcollageid" runat="server" Visible="false" Text='<%#Eval("collageid")%>'></asp:Literal>
+                                <asp:Literal ID="lituploadfile" runat="server" Visible="false" Text='<%#Eval("uploadfile")%>'></asp:Literal>
+                                <li><a id="ank" runat="server"><%#Eval("linkname")%></a></li>
+                            </ItemTemplate>
+                        </asp:Repeater>
+                        <li class="dropdown" id="l1_menu" runat="server" visible="false">
+                            <a class="btn btn-secondary dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"></a>
+                            <ul class="dropdown-menu">
+                                <asp:Repeater ID="rptdropdownmenu" runat="server" OnItemDataBound="rptdropdownmenu_ItemDataBound">
+                                    <ItemTemplate>
+                                        <asp:Literal ID="litpageid" runat="server" Visible="false" Text='<%#Eval("pageid")%>'></asp:Literal>
+                                        <asp:Literal ID="litpageurl" runat="server" Visible="false" Text='<%#Eval("pageurl")%>'></asp:Literal>
+                                        <asp:Literal ID="litrewriteurl" runat="server" Visible="false" Text='<%#Eval("rewriteurl")%>'></asp:Literal>
+                                        <asp:Literal ID="lituploadfile" runat="server" Visible="false" Text='<%#Eval("uploadfile")%>'></asp:Literal>
+                                        <asp:Literal ID="litcollageid" runat="server" Visible="false" Text='<%#Eval("collageid")%>'></asp:Literal>
+                                        <li><a class="dropdown-item" id="ank" runat="server"><%#Eval("linkname")%></a></li>
+                                    </ItemTemplate>
+                                </asp:Repeater>
+                            </ul>
+                        </li>
+                    </ul>
+  
+                    <div class="admission_btn">
+                          <a href="https://erp.mgumst.org/Enquiry/" target="_blank">Admissions 2024</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <main>
+            <section class="inner_common_title" id="panelcollage" runat="server" visible="false">
+                <div class="container">
+                    <div class="row align-items-center">
+                        <div class="col-lg-10 col-xxl-12">
+                            <h1 class="font-36">
+                                <asp:Literal ID="littitle" runat="server"></asp:Literal></h1>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </main>
+        <uc5:footer ID="footer1" runat="server" />
+        <uc6:mobilemenu ID="mobile1" runat="server" />
+
+        <script src="/assets/js/jquery-3.7.1.min.js"></script>
+        <script src="/assets/js/jquery.min.js"></script>
+        <script src="/assets/js/bootstrap.bundle.min.js"></script>
+        <script src="/assets/js/wow.min.js"></script>
+        <script src="/assets/js/lightcase.js"></script>
+        <script src="/assets/js/slick.js"></script>
+        <script src="/assets/js/owl.carousel.min.js"></script>
+        <script src="/assets/js/SmoothScroll.min.js"></script>
+        <script src="/assets/js/custom.js"></script>
+
+    </form>
+</body>
+</html>

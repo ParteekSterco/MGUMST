@@ -1,0 +1,219 @@
+/*UI07051988*/
+
+@media (max-width: 1919px){
+.university-sec .carousel-caption{width: 100%;}
+.university-sec .carousel-caption figure{margin: 0;}
+/*.university-sec .carousel-caption span{top: -15rem;}*/
+.message-box h4{margin: 1rem 0;font-size: 1.7rem;line-height: 2.2rem;}
+.message-box span{font-size: 1.8rem;}
+
+}
+
+@media (max-width: 1399px){
+	.programs-tab .course-search.txtsearchnew ul.wordWheel {top:55%!important;}
+
+.banner .carousel-caption.banner-content {bottom: 20%;left: 5%;}
+.univers-slider #carousel1 img.img-fluid.w-100.slider_campus_home { object-fit: cover; height: 610px;}
+
+.text-bnr-inn{width: 55rem;padding: 2rem;margin-top: 9.2rem;}
+.banner-text p {font-size: 2.2rem;}
+.banner-text span{padding: 1rem 0}
+.banner-text span img{width: 80%;}
+.programs-sec h2{font-size: 3.5rem;line-height: 5.5rem;margin-bottom:3rem;}
+.programs-sec .way-to-lear h2{font-size: 3rem;line-height: 4rem;}
+
+h1 {font-size: 6rem;line-height: 6rem;}
+h2 {font-size: 2.5rem;line-height: 3rem;}
+h3 {font-size: 3.5rem;line-height: 4rem;}
+h4 {font-size: 2rem;line-height: 2.5rem;}
+p{font-size: 1.5rem;}
+blockquote{font-size: 1.9rem;}
+.comm-head{padding-bottom: 3rem;}
+/*Tabs*/
+.programs-sec, .admission-sec, .research-banner, .university-sec, .placements-sec, .testimonials {padding: 4rem 0 3rem;}
+.programs-tab li {padding: 0 2rem 0 0;}
+.programs-tab a{font-size: 2rem;}
+.course-links a{padding: 1rem 3rem;font-size: 1.3rem;}
+.no-row strong{font-size: 3.8rem;}
+.no-row p {font-size: 1.8rem;}
+.learn-links a{padding: 1rem 0;font-size: 1.4rem;}
+.no-row{margin-bottom: 1.5rem;}
+.course-search{padding-bottom: 3rem;}
+.course-search input, .course-search button{height: 5.5rem;}
+
+/*Admissions*/
+.admission-inn {width: 45rem;}
+.schedule a{padding: 1rem;font-size: 1.8rem;}
+.schedule ul li:nth-child(2) a, .schedule ul li:nth-child(3) a{font-size: 2.5rem;}
+.schedule a img { width: auto;}
+
+/*Research*/
+.yellow-bg{width: 35rem;padding: 3rem;left: -29rem;bottom: 2rem;}
+.yellow-bg span{font-size: 2.5rem;margin-bottom: 1rem;}
+.research-banner .carousel-indicators span{font-size: 1.8rem;}
+.research-banner .carousel-indicators [data-bs-target]{padding: 1rem 1rem 1rem 2rem;}
+.links-inn a{padding: 1rem 2rem;font-size: 1.6rem;}
+.links-inn{margin-bottom: -2rem;}
+
+/*University*/
+.message-box h4{margin: 1rem 0;}
+.message-box p {margin: 0rem 0 1rem;}
+.university-sec .carousel-caption strong, .comm-head-right strong, .life-count strong, .placement-counter .life-count strong{font-size: 4rem;line-height: 5rem;}
+.university-sec .carousel-caption{width: 100%;padding: 2rem;}
+.university-sec .carousel-caption figure {margin-right: 0rem;width: 40%;}
+.research-banner .carousel-indicators{padding-bottom: 0;}
+.university-sec .carousel-caption span{font-size: 1.6rem;font-weight: 600;}
+
+/*Campus*/
+.campuses-sec {padding: 5rem 0;}
+.comm-head-right p, .life-count p, .placement-counter .life-count p{font-size: 1.7rem;}
+.comm-head-right .count{padding: 0 3rem 0rem;}
+
+/*Life*/ 
+.life-box{width: 50rem;}
+.life-top-bx, .life-bottom-bx{padding: 4rem;}
+.life-links{padding: 0;}
+.life-links a{font-size: 1.6rem;padding: .4rem 0;}
+.placement-counter .life-count{padding: 0 4rem;}
+.course-search {display: flex;align-items: center;padding: 6rem 0 4.3rem;}
+/*.life-bvdu .life-count:nth-child(2) {padding-top: 3rem;}*/
+.social-wall {padding: 20px 0 6rem;}
+.comm-head-left {width: 49rem;}
+.life-count{padding-right: 4rem;}
+
+/*UI-1994*/ 
+#repsocialwallright_ctl03_divother figure img{ min-height: 316px;object-fit: cover;}
+.welcome_sec {padding: 8rem 0rem;}
+
+
+}
+
+
+
+@media (max-width: 1199px){
+.yellow-bg {width: 45rem;padding: 2rem;left: -24rem;bottom: 2rem;}
+.yellow-bg h4 {font-weight: 500;margin-bottom: 1rem;line-height: 2.5rem;font-size: 2.4rem;}
+
+.university-sec .col-md-8 {padding-right: 1rem;}
+.university-sec .carousel-caption strong{font-size: 3rem; line-height: 3rem;}
+.university-sec .carousel-caption p{font-size: 1.5rem;}
+.university-sec .carousel-caption span {font-size: 1.5rem;/*top: -10rem;*/}
+.links-inn a{font-size: 1.5rem;font-weight: normal;}
+.message-box span {font-size: 1.6rem; margin: 0;}
+.message-box h4 {margin: 1rem 0 .5rem;font-size: 1.8rem;}
+.message-box p{font-size: 1.3rem;}
+
+.course-links a{padding: 1rem 2rem;}
+
+}
+
+@media (max-width: 991px){
+h1 {font-size: 4rem;line-height: 4rem;}
+h3{font-size: 3rem;line-height: 3.2rem;}
+h2{font-size: 2.4rem;font-weight: 700;}
+.banner-text p {line-height: 2.5rem;font-size: 1.8rem;}
+.text-bnr-inn{width: 35rem;margin-top: 7rem;}
+.banner-text span img {width: 15rem;}
+.banner-text span {padding: 1rem;}
+
+.programs-sec {padding-bottom: 0;}
+.programs-sec .col-md-9, .programs-sec .col-md-3{width: 100%;padding: 0;}
+.programs-sec .way-to-lear h2 {font-size: 2.4rem;margin-bottom: 1rem;text-align: center;font-weight: 700;}
+.way-to-lear {padding: 2rem;background: #F5F5F5;}
+.programs-sec .carousel-inner{width: 15rem;margin: auto;}
+.no-row strong {font-size: 4.3rem;}
+
+/*research*/
+.research-banner {background: #F5F5F5;padding-bottom: 2rem;}
+.research-banner .col-md-3, .research-banner .col-md-9{width: 100%;text-align: center;}
+.research-banner .col-md-3 h3 {padding: 1rem 0 2rem;margin-bottom: 3rem;}
+.research-banner .col-md-3 h3::before {margin: auto;right: 0;}
+.yellow-bg{position: static;width: 100%;text-align: left;padding: 3rem;}
+.yellow-bg h4{font-size: 2.1rem;font-weight: bold;}
+.yellow-bg p{font-size: 1.4rem;}
+.links-btm{display: none;}
+.research-banner .carousel-indicators span, .research-banner .carousel-indicators p{display: none;}
+.research-banner .carousel-indicators [data-bs-target]:first-child, .research-banner .carousel-indicators [data-bs-target]{border: 0;height: 1rem;width: 1rem;padding: 0;background: #F5E0E0;border-radius: 100%;margin: 0.5rem;}
+.research-banner .carousel-indicators .active[data-bs-target]{background: #FFE603;}
+.view-all-research{display: block;}
+
+blockquote, .comm-head span {font-size: 1.4rem;line-height: 2.1rem;}
+.univers-slider .col-md-8{width: 100%;}
+.univers-slider .col-md-4{display: none;}
+.university-sec .carousel-caption{justify-content: space-between;align-items: center;}
+.campuses-slide {width: 100%;}
+
+.campuses-sec .comm-head{flex-wrap: wrap;}
+.comm-head-left, .comm-head-right {width: 100%;text-align: center;justify-content: center;}
+.comm-head-right .count{border: 0;text-align: left;padding-top: 3rem;}
+.programs-sec h2 {font-size: 4.5rem;line-height: 4.5rem;margin-bottom: 1rem;}
+
+.programs-sec .col-md-9 {padding: 0 2rem;}
+.programs-tab {display: none;}
+.programs-mobile{display: block;}
+.programs-mobile .course-search{padding-bottom: 0rem;}
+.program-btn-m a {color: #fff;font-size: 1.8rem;font-weight: bold; width: 100%;padding: 1.5rem 2rem;margin: 1rem auto;display: flex;align-items: center;
+flex-wrap: wrap;border-radius: .5rem;text-transform: uppercase;letter-spacing: .1rem;background-image: url(../images/white-arrow-mini.svg);
+background-repeat: no-repeat;background-position: 92% center;font-family: 'Open Sans', sans-serif;}
+.program-btn-m a.viewAll {color: #000;justify-content: center;text-transform: capitalize;font-weight: normal;letter-spacing: 0;}
+.program-btn-m a.viewAll img{margin-left: 1rem;}
+.course-search button, .course-search input{height: 5.5rem;font-size: 1.6rem;}
+.Browse-By {text-align: center;padding: 2rem;}
+.Browse-By span{font-size: 2.4rem;font-weight: bold;font-family: 'Open Sans', sans-serif;position: relative;display: block;}
+.Browse-By span:before, .Browse-By span:after{background: #ddd;width: 20%;height: .1rem;position: absolute;top: 0;content: '';bottom: 0;margin: auto;}
+.Browse-By span:after{left: 0;}
+.Browse-By span:before{right: 0;}
+.Browse-Link {display: flex;justify-content: center;padding: 1rem;}
+.Browse-Link a{font-size: 1.8rem;font-family: 'Open Sans', sans-serif;padding: 0 1.7rem;position: relative;}
+.Browse-Link a:before{background: #FFD525;height: .8rem;width: .8rem;position: absolute;top: 0;left: 0;content: '';border-radius: 100%;bottom: 0;
+margin: auto;box-shadow: 0px 2px 3px #00000029;}
+.Browse-Link a:first-child:before{display: none;}
+
+}
+
+@media (max-width:767px){
+.admission-inn {width: 100%;padding: 0 1rem;}
+.admission-inn .admi-top-left {padding-left: 0;margin-bottom: 10rem;width: 100%;}
+.admi-top-left strong {line-height: 12.8rem;font-size: 12.8rem;}
+.admission-inn .schedule-btn{display: none;}
+.admission-inn .schedule a{font-size: 1.6rem;font-weight: normal;}
+.schedule ul li:nth-child(2) a, .schedule ul li:nth-child(3) a{font-size: 2.1rem;font-weight: 600;}
+
+.university-sec .carousel-caption strong {font-size: 4.3rem;line-height: 5rem;color: #1D1E4E;}
+.university-sec .carousel-caption p{font-size: 1.8rem;color: #000;}
+.uni-count{position: absolute;top: -20rem;width: 100%;left: 0;justify-content: center;}
+.university-sec .carousel-inner{overflow: visible;margin-top: 10rem;}
+.university-sec .carousel-caption h4{font-size: 1.4rem;}
+.university-sec .carousel-caption span {font-size: 1.4rem;top: unset;right: 0;left: unset;bottom: 0;}
+
+.campuses-sec {padding: 0;}
+.campuses-sec h3 {margin: 1rem 0;}
+
+.life-bvdu{background-size: 100%;background-attachment: scroll;background-position: center 100%;padding-bottom: 45%;}
+.life-box {width: 100%;padding: 0;}
+.life-bottom-bx{display: none;}
+.life-box h2, .life-box h3{margin-bottom: 2rem;text-align: center;}
+.life-top-bx{padding: 4rem 2rem;}
+
+}
+
+@media (max-width:575px){
+.banner.desktop-banner{display: none;}
+.banner.mobile-banner{display: block;}
+.banner .carousel-caption.banner-content{bottom: 0rem;left: 0;right: 0;padding: 5rem 3rem 10rem;background-image: linear-gradient(transparent, #000000ad);}
+.text-bnr-inn{width: 100%;background: none;}
+.banner-text span{display: none;}
+.text-bnr-inn{padding: 0 2rem;border-color: #FCCF14;}
+.banner-text p{font-size: 2.2rem;margin-bottom: 1rem;}
+.programs-sec{padding-top: 3rem;}
+.m-bnr-logo{display: block;padding-bottom: 2rem;}
+.uni-count{top: -20rem;}
+
+}
+@media (max-width:479px){
+
+.uni-count{top: -15rem;}
+
+}
+
+

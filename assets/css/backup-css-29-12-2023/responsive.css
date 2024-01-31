@@ -1,0 +1,362 @@
+
+@media only screen and (max-width:1365px) {
+    .brochure_btn>img{
+        width: 12px;
+    }
+}
+
+@media only screen and (max-width:1199px) {
+    .institute_news_box_big {
+        padding-bottom: 30px;
+    }
+    .news_box_inner {
+        max-width: 80%;
+    }
+    .news_small_img {
+        margin-right: -25px;
+    }
+    .news_box_small{
+        padding: 20px;
+        padding-left: 40px;
+    }
+    .inner_common_title .select_form {
+        margin-top: 30px;
+        width: 100%;
+        gap: 10px;
+    }
+    .gallery_box_inner {
+        max-width: 80%;
+    }
+}
+
+
+/* ---IPad Pro--- */
+@media only screen and (min-width: 1024px) and (max-height: 1366px) and (-webkit-min-device-pixel-ratio: 1.5) {
+    .search_list>a {
+        margin-right: 15px;
+        padding-right: 15px;
+    }
+    .home_notifyStyleTwo .home_notifyBox {
+        padding: 25px;
+    }
+    .slider_caption {
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .mguEvent_leftCaption {
+        margin-top: -50px;
+    }
+    .manu_list>ul>li {
+        margin-right: 10px;
+    }
+    .manu_list .admission_btn {
+        margin-right: 30px;
+    }
+    .Info_figure {
+        margin-bottom: -35px;
+    }
+}
+
+/* ---IPad--- */
+@media all and (device-width: 768px) and (device-height: 1024px) and (orientation:portrait) {
+     
+}
+
+
+@media (max-width:992px){
+
+    .main_header {
+        padding: 22px 0;
+    }
+    .main_header .brand-and-icon {
+        margin: 0 auto;
+    }
+    .main_header>.navbar>.container, .main_header>.navbar>.container-fluid {
+        padding: 0 30px;
+    }
+    .home_notifyStyleTwo .home_notifyBox {
+        padding: 15px;
+    }
+    .slider_caption .sliderLogo {
+        max-width: 100px;
+    }
+    .slider_caption {
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .home_notification .sub_title {
+        border-right: none;
+        border-bottom: 1px solid;
+    }
+    .search_list>a {
+        margin-right: 10px;
+        padding-right: 10px;
+    }
+    .exploreChallange_Wraper {
+        padding: 30px;
+    }
+    .exploreChallange_Wraper>ul {
+        margin-bottom: 30px;
+    }
+    .exploreChallange_Wraper>ul>li {
+        margin-bottom: 20px;
+    }
+    .MGU_RightCaption {
+        max-width: 100%;
+    }
+    .MGU_LeftNum p {
+        margin-top: -20px;
+    }
+    .lifeMGU_title {
+        padding-right: 5%;
+        padding-left: 5%;
+    }
+    .lmgu_box_caption {
+        padding: 20px 30px;
+    }
+    .mguEvent_leftCaption {
+        margin-top: -75px;
+        padding: 15px;
+    }
+    .news_box {
+        max-width: 100%;
+    }
+    .brochure_btn {
+        padding: 10px 18px;
+    }
+    .gallery_box_small {
+        padding: 20px;
+        padding-bottom: 0;
+    }
+}
+
+@media (max-width:765px) {
+    p {
+        margin-bottom: 15px;
+    }
+    .container{
+        padding-left: 25px;
+        padding-right: 25px;
+        max-width: 100%;
+    }
+    .main_header .navbar-brand {
+        width: 100%;
+    }
+
+    .home_slider {
+        padding-right: 0;
+        padding-bottom: 0;
+    }
+    .home_slider .item .row {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+        flex-direction: column-reverse;
+    }
+    .search_sec, .home_two_search_sec {
+        background-color:var(--bs-white);
+    }
+    .caption_title {
+        padding-bottom: 20px;
+    }
+    .slider_caption {
+        padding: 20px;
+    }
+    .caption_title {
+        font-size: 43px;
+        line-height: 42px;
+    }
+    .slider_caption p{
+        display: none;
+    }
+    .slider_figure::before{
+        display: none;
+    }
+    .home_notification, .home_notifyStyleTwo {
+        width: 100%;
+    }
+    .notify_box {
+        gap: 15px;
+        flex-direction: column;
+    }
+    .js-search{
+        padding-right: 0;
+        padding-left: 15px;
+    }
+    .searchform_box {
+        min-width: 100%;
+    }
+    .main_header::before {
+        width: 80%;
+    }
+    .notification_slider {
+        padding: 15px;
+        padding-bottom: 50px;
+    }
+    .notification_slider .owl-nav {
+        top: auto;
+        bottom: 10px;
+        right: 20px;
+        transform: none;
+    }
+    .exploreChallange_sec{
+        padding: 0;
+        overflow: hidden;
+    }
+    .exploreChallange_sec .container{
+        padding: 0;
+    }
+    .exploreChallange_sec .sec_title {
+        padding: 20px;
+        background: var(--color-5);
+    }
+    .exploreChallange_Wraper {
+        margin-left: 0;
+        max-width: 100%;
+        margin-top: 0;
+    }
+    .admission2024_box {
+        width: 85% !important;
+        margin: 50px auto -50px;
+        position: relative;
+        padding: 35px;
+        padding-bottom: 80px;
+    }
+    .admission2024_box h6{
+        color: var(--color-1) !important;
+    }
+    .admission2024_box h2 {
+        margin-bottom: 20px;
+    }
+    .MGU_secLeft{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .mGUIcon {
+        display: none;
+    }
+    .MGU_LeftNum {
+        max-width: 100%;
+        width: 50%;
+        flex: 0 0 auto;
+    }
+    .MGU_LeftNum{    display: none;}
+
+    .MGU_secLeft>ul {
+        width: 100%;
+    }
+    .MGU_secLeft>ul>li {
+        margin: 10px 0;
+        display: block;
+    }
+    .lifemgu_sec {
+        flex-wrap: wrap;
+    }
+    .lifeMGU_title {
+        padding: 40px 30px;
+    }
+    .lifeMGU_title, .lifeMGU_carousel {
+        max-width: 100%;
+    }
+    .MGU_event_left figure{
+        max-width: 90%;
+    }
+    .mguEvent_leftCaption {
+        max-width: 100%;
+    }
+    .ForeignCollab_carousel .item>img {
+        height: 51px;
+    }
+    .footer_logo {
+        display: none;
+    }
+    .footer_title, 
+    .footer_contact>li, 
+    .footer_social, 
+    .Footer_copyRight{
+        text-align: center;
+    }
+    .main_footer {
+        background-color: #272727;
+        padding: 30px 0 78px;
+    }
+    .footer_links>li>a{
+        color: var(--bs-white);
+    }
+
+    .aboutvm_wraper {
+        padding: 25px 25px;
+    }
+    .Info_figure, .contactInfo_form  {
+        margin-bottom: 25px;
+    }
+    .career_path_box {
+        padding: 10px;
+        margin-top: 35px;
+    }
+    .mgu_course_box .row{
+        --bs-gutter-y: 1rem;
+    }
+    .inner_common_title .col-1{    width: 100%;}
+    
+    .faculAauth_rightDtl p {
+        margin-bottom: 10px;
+    }
+    .departFaculties_tab_wraper {
+        padding: 0;
+    }
+    .institute_news_box_big, .news_box_big {
+        padding: 20px;
+        margin: 0;
+    }
+    .news_box_img {
+        margin-top: 0;
+    }
+    .news_box_inner{
+        max-width: 100%;
+    }
+    .news_box_small{
+        padding: 20px;
+    }
+    .news_small_img {
+        margin-right: 0;
+        margin-bottom: 0;
+    }
+    .news_item_box figure{
+        max-width: 90%;
+    }
+    .news_itemcaption {
+        max-width: 100%;
+        margin-top: -20px;
+    }
+    .newsTwoItems_carousel .news_item_box figure{
+        max-width:100%;
+    }
+    .select_form.input-group .form-select{
+        width: auto;
+        margin: 0;
+    }
+    .gallery_box_big{
+        padding: 25px;
+        margin-top: 0;
+    }
+    .gallery_box_img {
+        margin-left: 0;
+    }
+    .inner_gallery_secOne .row{
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+        flex-direction: column-reverse;
+    }
+    .gallery_box_small {
+        padding: 10px;
+    }
+}
+ 
+@media (max-width:350px) {
+    .caption_title {
+        font-size: 35px;
+        line-height: 42px;
+    }
+}

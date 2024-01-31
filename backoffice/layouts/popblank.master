@@ -1,0 +1,139 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="popblank.master.cs" Inherits="backoffice_layouts_popblank" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<link rel="icon" href="/backoffice/assets/bvdu.svg">
+<head runat="server">
+    <title></title>
+<meta name="robots" content="noindex, nofollow" />
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <asp:ScriptManager ID="ScriptManager1" runat="server">
+        </asp:ScriptManager>
+        <div>
+            <table width="98%" border="0" align="center" cellpadding="0" cellspacing="0">
+                <tr style="display: none">
+                    <td>
+                        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                            <tr bgcolor="#ffffff">
+                                <td>
+                                    <asp:Image ID="Image5" ImageUrl="~/backoffice/assets/content_top_lft.gif" runat="server" /></td>
+                                <td width="100%" class="content_topbg">
+                                </td>
+                                <td>
+                                    <asp:Image ID="Image6" ImageUrl="~/backoffice/assets/content_top_rght.gif" runat="server" /></td>
+                            </tr>
+                            <tr bgcolor="#ffffff">
+                                <td class="content_lbg">
+                                </td>
+                                <td>
+                                    <asp:LinkButton ID="LinkButton2" runat="server" CausesValidation="False">
+                                        <asp:Image ID="Image3" ImageUrl="~/backoffice/assets/logo.gif" CssClass="logo"
+                                            runat="server" width="275" height="71" /></asp:LinkButton>
+                                </td>
+                                <td align="right" class="content_rbg">
+                                </td>
+                            </tr>
+                            <tr bgcolor="#ffffff">
+                                <td>
+                                    <asp:Image ID="Image13" ImageUrl="~/backoffice/assets/content_bot_lft.gif" runat="server" /></td>
+                                <td class="cont_bot_bg">
+                                </td>
+                                <td>
+                                    <asp:Image ID="Image14" ImageUrl="~/backoffice/assets/content_bot_rght.gif" runat="server" /></td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                    </td>
+                </tr>
+                <tr>
+                    <td height="7">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                            <tr>
+                                <td>
+                                    <asp:Image ID="Image7" ImageUrl="~/backoffice/assets/content_top_lft.gif" runat="server" /></td>
+                                <td width="100%" class="content_topbg">
+                                </td>
+                                <td>
+                                    <asp:Image ID="Image8" ImageUrl="~/backoffice/assets/content_top_rght.gif" runat="server" /></td>
+                            </tr>
+                            <tr>
+                                <td class="content_lbg">
+                                    &nbsp;</td>
+                                <td bgcolor="#FFFFFF">
+                                    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                        <tr>
+                                            <td style="height: 22px">
+                                                &nbsp;</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="height: 250px" valign="top">
+                                                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                                                </asp:ContentPlaceHolder>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td height="22">
+                                                &nbsp;</td>
+                                        </tr>
+                                    </table>
+                                </td>
+                                <td class="content_rbg">
+                                    &nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <asp:Image ID="Image9" ImageUrl="~/backoffice/assets/content_bot_lft.gif" runat="server" /></td>
+                                <td class="cont_bot_bg">
+                                </td>
+                                <td>
+                                    <asp:Image ID="Image10" ImageUrl="~/backoffice/assets/content_bot_rght.gif" runat="server" /></td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td height="7">
+                    </td>
+                </tr>
+                <tr style="display: none">
+                    <td>
+                        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                            <tr>
+                                <td>
+                                    <asp:Image ID="Image11" ImageUrl="~/backoffice/assets/footer_lside.gif" runat="server" /></td>
+                                <td width="100%" class="footer_bg">
+                                    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                        <tr>
+                                            <td width="77%" class="toptxt2">
+                                                Copyright <%=DateTime.Now.Year%>, Bharati Vidyapeeth (Deemed to be University), all rights reserved.</td>
+                                            <td width="23%" class="toptxt2" align="right">
+                                                <a href="http://www.stercodigitex.com/services/web/web.php" target="_blank">&nbsp;Website
+                                                    Design</a> and <a href="http://www.stercodigitex.com/services/web/web-application.php"
+                                                        target="_blank">Development</a> by <a href="http://www.stercodigitex.com/" target="_blank">
+                                                            Sterco Digitex</a></td>
+                                        </tr>
+                                    </table>
+                                </td>
+                                <td>
+                                    <asp:Image ID="Image12" ImageUrl="~/backoffice/assets/footer_rside.gif" runat="server" /></td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </form>
+</body>
+</html>

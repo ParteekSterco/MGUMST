@@ -1,0 +1,391 @@
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/backoffice/layouts/BackMaster.master"  AutoEventWireup="true" CodeFile="viewresearch.aspx.cs" Inherits="backoffice_research_viewresearch" Theme="backtheme" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
+    <script type="text/javascript" src="../../fancybox/jquery.min.js"></script>
+    <script type="text/javascript" src="../../fancybox/jquery.mousewheel-3.0.4.pack.js"></script>
+    <script type="text/javascript" src="../../fancybox/jquery.fancybox-1.3.4.pack.js"></script>
+    <link rel="stylesheet" type="text/css" href="../../fancybox/jquery.fancybox-1.3.4.css"
+        media="screen" />
+    <input type="hidden" value="<%=appno%>" name="appno" id="appno">
+    <script type="text/javascript">
+        $(document).ready(function () {
+            var i = 0;
+            var toappno = document.getElementById("appno").value;
+            for (i = 1; i <= toappno; i++) {
+                $("#various1" + i).fancybox({
+                    'width': '80%',
+                    'height': '80%',
+                    'autoScale': true,
+                    'scrolling': true,
+                    'transitionIn': 'elastic',
+                    'transitionOut': 'elastic',
+                    'type': 'iframe'
+                });
+            }
+
+            for (i = 1; i <= toappno; i++) {
+                $("#various2" + i).fancybox({
+                    'width': '80%',
+                    'height': '80%',
+                    'autoScale': true,
+                    'scrolling': true,
+                    'transitionIn': 'elastic',
+                    'transitionOut': 'elastic',
+                    'type': 'iframe'
+                });
+            }
+        });
+    </script>
+    <link rel="stylesheet" type="text/css" href="../../calendar_js/epoch_styles.css" />
+    <script type="text/javascript" src="../../calendar_js/epoch_classes.js"></script>
+    <script type="text/javascript">
+        /*You can also place this code in a separate file and link to it like epoch_classes.js*/
+        var dp_cal;
+        window.onload = function () {
+            dp_cal = new Epoch('epoch_popup', 'popup', document.getElementById('<%=TextBox5.ClientID%>'));
+            dp_cal = new Epoch('epoch_popup', 'popup', document.getElementById('<%=TextBox6.ClientID%>'));
+        };
+    </script>
+     <h2> View Research Section</h2>
+<div class="content-panel">
+    <table id="TABLE1" cellpadding="2" cellspacing="0" width="100%">
+        <tr>
+            <td class="head1" style="width: 20%">
+                
+            </td>
+            <td align="right" style="width: 80%">
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" class="h_dot_line">
+                &nbsp;
+            </td>
+        </tr>
+        <tr>
+            <td class="headingtext" colspan="2">
+                <div class="error" align="left" id="trerror" runat="server">
+                    &nbsp;&nbsp;
+                    <asp:Label ID="lblerror" runat="server"></asp:Label>
+                </div>
+                <div class="success" align="left" id="trsuccess" runat="server">
+                    &nbsp;&nbsp;
+                    <asp:Label ID="lblsuccess" runat="server"></asp:Label>
+                </div>
+                <div class="notice" align="left" id="trnotice" runat="server">
+                    &nbsp;&nbsp;
+                    <asp:Label ID="lblnotice" runat="server"></asp:Label>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td align="center" colspan="2" height="10">
+            </td>
+        </tr>
+        <tr>
+            <td align="center" colspan="2" height="10">
+                <asp:CompareValidator ID="CompareValidator1" runat="server" ErrorMessage="End date must be later than Start date"
+                    ControlToCompare="TextBox5" ControlToValidate="TextBox6" Type="Date" Operator="GreaterThan"
+                    Display="Dynamic">
+                </asp:CompareValidator>
+            </td>
+        </tr>
+        <tr>
+            <td align="center" colspan="2">
+                <asp:Panel ID="Panel1" runat="server" DefaultButton="btnSearch" GroupingText="Search"
+                    Width="80%">
+                    <table id="Table3" border="0" cellpadding="2" cellspacing="0" class="panelbg" width="100%">
+                        <tr>
+                            <td align="left" colspan="4" height="5">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td align="right">
+                                Title
+                            </td>
+                            <td align="left">
+                                <asp:TextBox ID="TextBox4" runat="server" CssClass="box" Width="200px"></asp:TextBox>
+                            </td>
+                            <td align="right">
+                                Research Type
+                            </td>
+                            <td align="left">
+                                <asp:DropDownList ID="ntypeid" runat="server" Width="200px">
+                                </asp:DropDownList>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td align="right">
+                                Start Date
+                            </td>
+                            <td align="left">
+                                <asp:TextBox ID="TextBox5" runat="server" contentEditable="false" CssClass="box"
+                                    MaxLength="100" Width="200px"></asp:TextBox>
+                                <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ControlToValidate="TextBox5"
+                                    CssClass="msgvalidator" Display="Dynamic" ErrorMessage="Invalid Date Format"
+                                    ValidationExpression="^((((((((jan(uary)?)|(mar(ch)?)|(may)|(july?)|(aug(ust)?)|(oct(ober)?)|(dec(ember)?)) ((3[01])|29))|(((apr(il)?)|(june?)|(sep(tember)?)|(nov(ember)?)) ((30)|(29)))|(((jan(uary)?)|(feb(ruary)?|(mar(ch)?)|(apr(il)?)|(may)|(june?)|(july?)|(aug(ust)?)|(sep(tember)?)|(oct(ober)?)|(nov(ember)?)|(dec(ember)?))) (2[0-8]|(1\d)|(0?[1-9])))),? )|(((((1[02])|(0?[13578]))[\.\-/]((3[01])|29))|(((11)|(0?[469]))[\.\-/]((30)|(29)))|(((1[0-2])|(0?[1-9]))[\.\-/](2[0-8]|(1\d)|(0?[1-9]))))[\.\-/])|(((((3[01])|29)[ \-\./]((jan(uary)?)|(mar(ch)?)|(may)|(july?)|(aug(ust)?)|(oct(ober)?)|(dec(ember)?)))|(((30)|(29))[ \.\-/]((apr(il)?)|(june?)|(sep(tember)?)|(nov(ember)?)))|((2[0-8]|(1\d)|(0?[1-9]))[ \.\-/]((jan(uary)?)|(feb(ruary)?|(mar(ch)?)|(apr(il)?)|(may)|(june?)|(july?)|(aug(ust)?)|(sep(tember)?)|(oct(ober)?)|(nov(ember)?)|(dec(ember)?)))))[ \-\./])|((((3[01])|29)((jan)|(mar)|(may)|(jul)|(aug)|(oct)|(dec)))|(((30)|(29))((apr)|(jun)|(sep)|(nov)))|((2[0-8]|(1\d)|(0[1-9]))((jan)|(feb)|(mar)|(apr)|(may)|(jun)|(jul)|(aug)|(sep)|(oct)|(nov)|(dec)))))(((175[3-9])|(17[6-9]\d)|(1[89]\d{2})|[2-9]\d{3})|\d{2}))|((((175[3-9])|(17[6-9]\d)|(1[89]\d{2})|[2-9]\d{3})|\d{2})((((1[02])|(0[13578]))((3[01])|29))|(((11)|(0[469]))((30)|(29)))|(((1[0-2])|(0[1-9]))(2[0-8]|(1\d)|(0[1-9])))))|(((29feb)|(29[ \.\-/]feb(ruary)?[ \.\-/])|(feb(ruary)? 29,? ?)|(0?2[\.\-/]29[\.\-/]))((((([2468][048])|([3579][26]))00)|(17((56)|([68][048])|([79][26])))|(((1[89])|([2-9]\d))(([2468][048])|([13579][26])|(0[48]))))|(([02468][048])|([13579][26]))))|(((((([2468][048])|([3579][26]))00)|(17((56)|([68][048])|([79][26])))|(((1[89])|([2-9]\d))(([2468][048])|([13579][26])|(0[48]))))|(([02468][048])|([13579][26])))(0229)))$"></asp:RegularExpressionValidator>
+                            </td>
+                            <td align="right">
+                                End Date
+                            </td>
+                            <td align="left">
+                                <asp:TextBox ID="TextBox6" runat="server" contentEditable="false" CssClass="box"
+                                    MaxLength="100" Width="200px"></asp:TextBox>
+                                <asp:RegularExpressionValidator ID="RegularExpressionValidator2" runat="server" ControlToValidate="TextBox6"
+                                    CssClass="msgvalidator" Display="Dynamic" ErrorMessage="Invalid Date Format"
+                                    ValidationExpression="^((((((((jan(uary)?)|(mar(ch)?)|(may)|(july?)|(aug(ust)?)|(oct(ober)?)|(dec(ember)?)) ((3[01])|29))|(((apr(il)?)|(june?)|(sep(tember)?)|(nov(ember)?)) ((30)|(29)))|(((jan(uary)?)|(feb(ruary)?|(mar(ch)?)|(apr(il)?)|(may)|(june?)|(july?)|(aug(ust)?)|(sep(tember)?)|(oct(ober)?)|(nov(ember)?)|(dec(ember)?))) (2[0-8]|(1\d)|(0?[1-9])))),? )|(((((1[02])|(0?[13578]))[\.\-/]((3[01])|29))|(((11)|(0?[469]))[\.\-/]((30)|(29)))|(((1[0-2])|(0?[1-9]))[\.\-/](2[0-8]|(1\d)|(0?[1-9]))))[\.\-/])|(((((3[01])|29)[ \-\./]((jan(uary)?)|(mar(ch)?)|(may)|(july?)|(aug(ust)?)|(oct(ober)?)|(dec(ember)?)))|(((30)|(29))[ \.\-/]((apr(il)?)|(june?)|(sep(tember)?)|(nov(ember)?)))|((2[0-8]|(1\d)|(0?[1-9]))[ \.\-/]((jan(uary)?)|(feb(ruary)?|(mar(ch)?)|(apr(il)?)|(may)|(june?)|(july?)|(aug(ust)?)|(sep(tember)?)|(oct(ober)?)|(nov(ember)?)|(dec(ember)?)))))[ \-\./])|((((3[01])|29)((jan)|(mar)|(may)|(jul)|(aug)|(oct)|(dec)))|(((30)|(29))((apr)|(jun)|(sep)|(nov)))|((2[0-8]|(1\d)|(0[1-9]))((jan)|(feb)|(mar)|(apr)|(may)|(jun)|(jul)|(aug)|(sep)|(oct)|(nov)|(dec)))))(((175[3-9])|(17[6-9]\d)|(1[89]\d{2})|[2-9]\d{3})|\d{2}))|((((175[3-9])|(17[6-9]\d)|(1[89]\d{2})|[2-9]\d{3})|\d{2})((((1[02])|(0[13578]))((3[01])|29))|(((11)|(0[469]))((30)|(29)))|(((1[0-2])|(0[1-9]))(2[0-8]|(1\d)|(0[1-9])))))|(((29feb)|(29[ \.\-/]feb(ruary)?[ \.\-/])|(feb(ruary)? 29,? ?)|(0?2[\.\-/]29[\.\-/]))((((([2468][048])|([3579][26]))00)|(17((56)|([68][048])|([79][26])))|(((1[89])|([2-9]\d))(([2468][048])|([13579][26])|(0[48]))))|(([02468][048])|([13579][26]))))|(((((([2468][048])|([3579][26]))00)|(17((56)|([68][048])|([79][26])))|(((1[89])|([2-9]\d))(([2468][048])|([13579][26])|(0[48]))))|(([02468][048])|([13579][26])))(0229)))$"></asp:RegularExpressionValidator>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td align="left" colspan="4" height="10">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td align="center" colspan="4">
+                                &nbsp;<asp:Button ID="btnSearch" runat="server" Text="Search" CssClass="btnbg" OnClick="btnSearch_Click1" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td align="center" colspan="4" height="5">
+                            </td>
+                        </tr>
+                    </table>
+                </asp:Panel>
+            </td>
+        </tr>
+        <tr>
+            <td align="center" colspan="2" height="10">
+            </td>
+        </tr>
+        <tr>
+            <td align="center" colspan="2">
+                <asp:GridView ID="GridView1" runat="server" AllowPaging="True" PageSize="50" Width="100%"
+                    AutoGenerateColumns="False" OnRowDataBound="GridView1_RowDataBound" 
+                    OnRowCommand="GridView1_RowCommand1" 
+                    onpageindexchanging="GridView1_PageIndexChanging1">
+                    <Columns>
+                        <asp:TemplateField HeaderText="S.No.">
+                            <HeaderStyle HorizontalAlign="Center" Width="5%" />
+                            <ItemStyle HorizontalAlign="Center" VerticalAlign="Middle" />
+                            <ItemTemplate>
+                                <%--<%# ((GridViewRow)Container).RowIndex + 1 %>--%>
+                                <%#Container.DataItemIndex+1 %>
+                            </ItemTemplate>
+                        </asp:TemplateField>
+                        <asp:TemplateField HeaderText="Research Type">
+                            <ItemTemplate>
+                                <%# Eval("ntype")%>
+                            </ItemTemplate>
+                            <ItemStyle HorizontalAlign="left" Width="10%" />
+                            <HeaderStyle HorizontalAlign="left" Width="10%" />
+                        </asp:TemplateField>
+                        <asp:TemplateField HeaderText="Title">
+                            <ItemTemplate>
+                                <%# Eval("researchTitle")%>
+                            </ItemTemplate>
+                            <HeaderStyle HorizontalAlign="left" Width="20%" />
+                            <ItemStyle HorizontalAlign="left" VerticalAlign="Middle" />
+                        </asp:TemplateField>
+                       <%--  <asp:TemplateField HeaderText="Type">
+                            <ItemTemplate>
+                                <%# Eval("types")%>
+                            </ItemTemplate>
+                            <HeaderStyle HorizontalAlign="left" Width="5%" />
+                            <ItemStyle HorizontalAlign="left" VerticalAlign="top" />
+                        </asp:TemplateField>--%>
+
+                        <asp:TemplateField HeaderText="Location" Visible="false">
+                            <ItemTemplate>
+                                <%# Eval("location")%>
+                            </ItemTemplate>
+                            <HeaderStyle HorizontalAlign="left" Width="20%" />
+                            <ItemStyle HorizontalAlign="left" VerticalAlign="Middle" />
+                        </asp:TemplateField>
+                        <asp:TemplateField HeaderText="Rsearch Date">
+                            <ItemStyle Width="8%" />
+                            <ItemTemplate>
+                                <%#Eval("researchsdate", "{0:dd/MM/yyyy}")%>
+                            </ItemTemplate>
+                        </asp:TemplateField>
+                        <asp:TemplateField HeaderText="Color" Visible="false">
+                            <HeaderStyle HorizontalAlign="Center" Width="5%" />
+                            <ItemStyle HorizontalAlign="Center" VerticalAlign="Middle" Width="5%" />
+                            <ItemTemplate>
+                                <asp:Label ID="lblcolor" runat="server" Text='<%#Eval("colorcode")%>' Visible="false"></asp:Label>
+                                <asp:TextBox ID="txtcolor" Width="19" CssClass="txtbox" runat="server" BorderStyle="None"></asp:TextBox>
+                            </ItemTemplate>
+                        </asp:TemplateField>
+                        <asp:TemplateField HeaderText="Download File" Visible="true">
+                            <ItemStyle Width="8%" />
+                            <ItemTemplate>
+                                <asp:Label ID="lbldown" runat="server" Text='<%#Eval("uploadfile")%>' Visible="false"></asp:Label>
+                                <asp:Label ID="lblsmallimg" runat="server" Text='<%#Eval("UploadEvents")%>' Visible="false"></asp:Label>
+                                <asp:Label ID="lbllargeimg" runat="server" Text='<%#Eval("largeimage")%>' Visible="false"></asp:Label>
+                                <asp:LinkButton ID="downbtn" runat="server" CausesValidation="false" CommandArgument='<%# Eval("researchid") %>'
+                                    CommandName="downbtn">
+                                    <asp:Image ID="imgDown" runat="server" BorderWidth="0" ImageUrl="~/backoffice/assets/Download_24x24.png" /></asp:LinkButton>
+                            </ItemTemplate>
+                        </asp:TemplateField>
+                        <asp:TemplateField HeaderText="Publish">
+                            <HeaderStyle HorizontalAlign="Center" Width="5%" />
+                            <ItemStyle HorizontalAlign="Center" VerticalAlign="Middle" />
+                            <ItemTemplate>
+                                <asp:Label ID="lblstatus" runat="server" Text='<%#Eval("status") %>' Visible="false"></asp:Label>
+                                <asp:ImageButton ID="lnkstatus" CssClass="toptxt" runat="server" CausesValidation="false"
+                                    CommandArgument='<%# Eval("researchid") %>' CommandName="status"></asp:ImageButton>
+                            </ItemTemplate>
+                        </asp:TemplateField>
+                        <asp:TemplateField HeaderText="Show on home" Visible="true">
+                            <HeaderStyle HorizontalAlign="Center" Width="10%" />
+                            <ItemStyle HorizontalAlign="Center" VerticalAlign="Middle" />
+                            <ItemTemplate>
+                                <asp:Label ID="lblntypeid" runat="server" Text='<%#Eval("ntypeid") %>' Visible="false"></asp:Label>
+                                <asp:Label ID="lblshowonhome" runat="server" Text='<%#Eval("showonhome") %>' Visible="false"></asp:Label>
+                                <asp:ImageButton ID="lnkshowonhome" CssClass="toptxt" runat="server" CausesValidation="false"
+                                    CommandArgument='<%# Eval("researchid") %>' CommandName="lnkshowonhome"></asp:ImageButton>
+                            </ItemTemplate>
+                        </asp:TemplateField>
+
+
+
+                        <asp:TemplateField HeaderText="Show With Picture" Visible="false">
+                            <HeaderStyle HorizontalAlign="Center" Width="10%" />
+                            <ItemStyle HorizontalAlign="Center" VerticalAlign="Middle" />
+                            <ItemTemplate>
+                                <asp:Label ID="lblshowonschool" runat="server" Text='<%#Eval("showonschool") %>' Visible="false"></asp:Label>
+                                <asp:ImageButton ID="lnkshowonschool" CssClass="toptxt" runat="server" CausesValidation="false"
+                                    CommandArgument='<%# Eval("researchid") %>' CommandName="lnkshowonschool"></asp:ImageButton>
+                            </ItemTemplate>
+                        </asp:TemplateField>
+
+                        <asp:TemplateField HeaderText="Show on Group" Visible="false">
+                            <HeaderStyle HorizontalAlign="Center" Width="10%" />
+                            <ItemStyle HorizontalAlign="Center" VerticalAlign="Middle" />
+                            <ItemTemplate>
+                                <asp:Label ID="lblshowongroup" runat="server" Text='<%#Eval("showongroup") %>' Visible="false"></asp:Label>
+                                <asp:ImageButton ID="lnkshowongroup" CssClass="toptxt" runat="server" CausesValidation="false"
+                                    CommandArgument='<%# Eval("researchid") %>' CommandName="lnkshowongroup"></asp:ImageButton>
+                            </ItemTemplate>
+                        </asp:TemplateField>
+
+
+
+
+
+
+
+                        <asp:TemplateField HeaderText="Date" Visible="false">
+                            <ItemStyle Width="8%" />
+                            <ItemTemplate>
+                                <%#Eval("researchsdate", "{0:dd/MM/yyyy}")%>
+                            </ItemTemplate>
+                        </asp:TemplateField>
+                        <asp:BoundField DataField="Displayorder" HeaderText="DisplayOrder" Visible="true">
+                            <HeaderStyle HorizontalAlign="center" Width="8%" />
+                            <ItemStyle HorizontalAlign="center" VerticalAlign="Middle" />
+                        </asp:BoundField>
+
+
+
+
+                          <asp:TemplateField HeaderText="Map Faculty" Visible="false">
+                            <HeaderStyle HorizontalAlign="Center" Width="7%" />
+                            <ItemStyle HorizontalAlign="Center" />
+                            <ItemTemplate>
+                                <asp:Panel runat="server" ID="pnl_faculty" Visible="false">
+                                    <a id='various2<%# ((GridViewRow)Container).RowIndex + 1 %>' class="toptxtfaculty" visible="false"
+                                        href='map_researchfaculty.aspx?researchid=<%#Eval("researchid")%>'>
+                                        <img border="0" src="../assets/Text Document_24x24.png" alt="" />
+                                    </a>
+                                </asp:Panel>
+                            </ItemTemplate>
+                        </asp:TemplateField>
+
+
+
+                        <asp:TemplateField HeaderText="Edit">
+                            <HeaderStyle HorizontalAlign="Center" Width="5%" />
+                            <ItemStyle HorizontalAlign="Center" VerticalAlign="Middle" />
+                            <ItemTemplate>
+                                <asp:ImageButton ID="btnedit" runat="server" CausesValidation="false" CommandArgument='<%# Eval("researchid") %>'
+                                    CommandName="edit" ImageUrl="~/backoffice/assets/edit.png" ToolTip="Click to Edit" />
+                            </ItemTemplate>
+                        </asp:TemplateField>
+                        <asp:TemplateField HeaderText="Delete">
+                            <HeaderStyle HorizontalAlign="Center" Width="5%" />
+                            <ItemStyle HorizontalAlign="Center" VerticalAlign="Middle" />
+                            <ItemTemplate>
+                                <asp:ImageButton ID="btndel" runat="server" CausesValidation="false" CommandArgument='<%# Eval("researchid") %>'
+                                    CommandName="del" ImageUrl="~/backoffice/assets/Remove_24x24.png" />
+                                <ajaxToolkit:ConfirmButtonExtender ID="cbe" runat="server" ConfirmText="Are you sure you want to delete this?"
+                                    TargetControlID="btndel">
+                                </ajaxToolkit:ConfirmButtonExtender>
+                            </ItemTemplate>
+                        </asp:TemplateField>
+                        <asp:TemplateField HeaderText="Add Keyword" Visible="false">
+                            <HeaderStyle HorizontalAlign="Center" Width="7%" />
+                            <ItemStyle HorizontalAlign="Center" />
+                            <ItemTemplate>
+                                <a id='various1<%# ((GridViewRow)Container).RowIndex + 1 %>' class="toptxt" visible="false"
+                                    href='add_mediasection_keyword.aspx?researchid=<%#Eval("researchid")%>'>
+                                    <img border="0" src="../assets/Text Document_24x24.png" alt="" />
+                                </a>
+                            </ItemTemplate>
+                        </asp:TemplateField>
+                        <asp:TemplateField HeaderText="Add Gallery" Visible="false">
+                            <HeaderStyle HorizontalAlign="Center" Width="7%" />
+                            <ItemStyle HorizontalAlign="Center" />
+                            <ItemTemplate>
+                                <asp:Literal Text='<%# Eval("ntypeid")%>' ID="lit_Eventsid" Visible="false" runat="server" />
+                                <asp:Panel runat="server" ID="pnl_gallery" Visible="false">
+                                    <a id='various2<%# ((GridViewRow)Container).RowIndex + 1 %>' class="toptxt" visible="false"
+                                        href='event_gallery.aspx?Eventsid=<%#Eval("researchid")%>'>
+                                        <img border="0" src="../assets/Text Document_24x24.png" alt="" />
+                                    </a>
+                                </asp:Panel>
+                            </ItemTemplate>
+                        </asp:TemplateField>
+
+
+
+
+
+                       
+
+
+
+
+
+                    </Columns>
+                    <SelectedRowStyle HorizontalAlign="Right" />
+                    <PagerStyle HorizontalAlign="Right" />
+                </asp:GridView>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+            </td>
+        </tr>
+        <tr style="display: none">
+            <td align="left" colspan="2">
+                <%--<asp:Repeater ID="Repeater1" runat="server" Visible="False">
+                    <ItemTemplate>
+                        <asp:TextBox ID="txt1" runat="server" Text='<%# DataBinder.Eval(Container.DataItem, "Projid") %>'
+                            Visible="false">
+                        </asp:TextBox>
+                        <asp:TextBox ID="txt2" runat="server" Text='<%# DataBinder.Eval(Container.DataItem, "parentid") %>'
+                            Visible="false">
+                        </asp:TextBox>
+                        <asp:TextBox ID="txt3" runat="server" Text='<%# DataBinder.Eval(Container.DataItem, "Depth") %>'
+                            Visible="false">
+                        </asp:TextBox>
+                        <img height="1" width='<%# Convert.ToInt32(DataBinder.Eval(Container.DataItem, "Depth")) * 20 %>' />
+                        <asp:LinkButton ID="lnk1" runat="server" CausesValidation="False" CommandName="edit">
+												<%#DataBinder.Eval(Container.DataItem, "ProjName")%>
+                        </asp:LinkButton>
+                        <br />
+                    </ItemTemplate>
+                </asp:Repeater>--%>
+            </td>
+        </tr>
+    </table>
+</div>
+</asp:Content>

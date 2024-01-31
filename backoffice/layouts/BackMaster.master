@@ -1,0 +1,91 @@
+<%@ Master Language="C#" AutoEventWireup="true" CodeFile="BackMaster.master.cs" Inherits="backoffice_layouts_BackMaster"
+    EnableTheming="true"  %>
+
+<%@ Register Src="~/backoffice/usercontrols/backmenu/uc_backmenu.ascx" TagName="uc_backmenu"
+    TagPrefix="uc1" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <meta http-equiv="Page-Enter" content="RevealTrans(Duration=0,Transition=0)" />
+    <title>MGUMST ::Admin Panel</title>
+<meta name="robots" content="noindex, nofollow" />
+    <script type="text/javascript" src="../../backoffice/usercontrols/backmenu/jquery.min.js"></script>
+    <script type="text/javascript" src="../../backoffice/usercontrols/backmenu/ddaccordion.js"></script>
+    <script type="text/javascript" src="../../backoffice/usercontrols/backmenu/sterco.js"></script>
+    <link href="/App_Themes/backtheme/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <script src="/App_Themes/backtheme/jquery-3.3.1.slim.min.js" type="text/javascript"></script>
+    <script src="/App_Themes/backtheme/bootstrap.min.js" type="text/javascript"></script>
+    <link href="/App_Themes/backtheme/dynamic.css" rel="stylesheet" type="text/css" />
+    <link rel="icon" href="/backoffice/assets/bvdu.svg">
+</head>
+<body>
+    <form id="form1" runat="server">
+    <asp:ScriptManager ID="ScriptManager1" runat="server">
+    </asp:ScriptManager>
+    <header class="header-backoffice header-sticky">
+		<div class="row">
+						          <div class="col-md-4">
+                                    <div class="logo-backoffice">
+									<asp:Label ID="lbltheme" runat="server" Visible="False"></asp:Label>
+                                          <asp:LinkButton ID="LinkButton2" runat="server" CausesValidation="False"    onclick="LinkButton2_Click"> 
+                                                 <asp:Image ID="Image3" ImageUrl="/backoffice/assets/logo-light.png"  runat="server" Width="150px" Height="80px"/></asp:LinkButton>
+                                  </div></div><div class="col-md-8">
+								          <div class="hrd-office">
+										        <ul>
+                                               <li class="date-colm"> <img src="../assets/calendar-hrd.png" alt="Today" />
+                                                    <asp:Label ID="lbldatetime" runat="server"></asp:Label>
+													</li>
+                                               <li class="welcome-admin"> Welcome
+                                                    <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
+													<img src="../assets/user.png" alt="Welcome" />
+													</li>
+                                                <li class="logout-admin"><asp:LinkButton ID="LinkButton1" runat="server" CausesValidation="False" OnClick="LinkButton1_Click">
+												Logout <img src="../assets/logout.png" alt="Logout" /></asp:LinkButton></li>
+												</ul>
+												</div>
+                                        </div>
+                                                
+                            </div>
+		</header>
+    <div class="main-contenter">
+        <div class="row">
+            <div class="col-md-3 pr-0">
+                <div class="mobile_nav">
+                    <a href="javascript:void(0);" class="mobile_nav_icon"></a>
+                    <div class="right-menu-main navbar-collapse" id="navbarResponsive2">
+                        <div class="dashboard-colm">
+                            <asp:ImageButton ID="imghome" runat="server" ImageUrl="../assets/dashboard.png" CausesValidation="false" />
+                            <asp:LinkButton ID="LinkButton3" CausesValidation="false" CssClass="" 
+                                runat="server" onclick="LinkButton3_Click">Dashboard</asp:LinkButton></div>
+                        <uc1:uc_backmenu ID="Uc_backmenu1" runat="server" />
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-9 pl-5 left-content-main">
+                <!-- Form place holder -->
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                </asp:ContentPlaceHolder>
+                <footer>Copyrights &copy; <%=DateTime.Now.Year%> MGUMST . All Rights Reserved.</footer>
+            </div>
+        </div>
+    </div>
+    </form>
+    <script>
+        jQuery(document).ready(function ($) {
+            $(window).scroll(function () {
+                if ($(this).scrollTop() > 70) {
+                    $('.header-sticky').addClass("sticky");
+                }
+                else {
+                    $('.header-sticky').removeClass("sticky");
+                }
+
+            });
+            $('.mobile_nav_icon').on('click', function () {
+                $('#navbarResponsive2').toggleClass('menuopened');
+                $(this).toggleClass('open');
+            });
+        });
+    </script>
+</body>
+</html>

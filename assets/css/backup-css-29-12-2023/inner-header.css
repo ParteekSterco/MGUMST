@@ -1,0 +1,9 @@
+.main_header {
+    background-color: #F9F9F9;
+}
+
+.inner_menu {
+    background-color: var(--color-9);
+    border-bottom: none;
+    margin-bottom: 0;
+}

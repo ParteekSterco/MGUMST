@@ -1,0 +1,92 @@
+/*UI07051988*/
+.header {position: fixed;width: 100%;top: 0;z-index: 99;transition: 0.5s;background: linear-gradient(#111111d6, #fff0);}
+.header-wrapper {padding:0 2%;display: flex;justify-content: space-between;align-items: center;}
+.header-wrapper .navbar{width: 100%;position: static;}
+.bundle.mobile-ham-menu {display: none;}
+.navbar-menu > ul {display: flex;}
+.navbar-menu ul li > a{font-size: 2.1rem;padding:1.3rem 2rem;font-weight: 600;color: var(--colorwhite);line-height: 2.1rem;transition: 0.5s;}
+.navbar-menu ul li:hover > a {color: #FCCF14;}
+.navbar-menu ul .admission-btn > a{background: #FCCF14;color: #000;}
+.navbar-menu ul .admission-btn:hover > a{background: #005479;}
+.hamberger{margin-left: 2.5rem;}
+.logo-home {position: relative;z-index: 9;}
+.sticky .logo-home img{max-width: 60%;}
+.header.sticky {background: #313131e6;padding: 1rem 0;}
+.sticky .navbar-menu ul li > a{font-size: 1.9rem;padding: 1.3rem 1.5rem;}
+
+.fixed-icon {position: fixed;right: 0;top: 30%;z-index: 9;}
+.fixed-icon a{display: flex;align-items: center;background: #000;transition: 0.5s;position: relative;padding: 1rem;height: 5rem;width: 5rem;transition:all linear 0.2s ;}
+/*.fixed-icon figure{padding: 1rem;height: 5rem;width: 5rem;}*/
+.fixed-icon a:nth-child(2){background: #033C59;}
+.fixed-icon a:nth-child(3) {background:#005479;}
+.fixed-icon a:nth-child(4) {background: #F5A302;}
+.fixed-icon p{transform: translateX(100%);transition: all .25s ease;display: none;}
+/*.fixed-icon a:hover{width: 20rem;}*/
+.fixed-icon a:hover p{transform: translateX(0);}
+
+
+/*hamberger menu*/
+.mobile-hamb{display: none;}
+.box-menu {width: 50%;}
+.side-menu {overflow-y: auto;background-color:#F3F0E8;width: 80rem;padding:15rem 5rem 10rem 10rem;position: absolute;top: 0;right: -80rem;z-index: 9999;height: 100vh;transition: all 0.3s ease-in-out;opacity: 0;}
+.side-menu li a:before{background: #333;height: 100%;width: 0; position: absolute;bottom: 0;left: 0;content: '';opacity: 1;transition: 0.5s;z-index: -1;border-radius: .5rem 0 0 .5rem;}
+.side-menu li a:hover:before{width:100%;}
+.side-menu a{font-size: 1.6rem;padding: .5rem ;color: #4a4a4a;line-height: 1.9rem;font-family: 'Open Sans', sans-serif;position: relative;display: inline-block;margin: .2rem 0;}
+.side-menu a:hover{color: #fff;padding: .5rem 1rem;}
+.side-menu h3 a{font-size: 1.75rem;color: #393939;padding: .2rem 0rem;}
+.side-menu.open-slide {right: 0;opacity: 1;}
+.opacity-bg {background: url(../images/bg.jpg) repeat;width:0; position: fixed;right: 0; top: 0; opacity: 0;transition: 0.5s; z-index: 999;height: 100%;}
+.open-slide + .opacity-bg {opacity: 0.8;width: 100%;}
+.slide-toggle{cursor: pointer;}
+.close-icon {width: 2.5rem;height: 2.5rem;display: inline-block;filter: brightness(30%);cursor: pointer;position: absolute;right: 3rem;top: 4rem;}
+.box-menu h4{padding: 0 0 1rem; margin: 0 0 1.3rem;position: relative;transition: 0.5s;}
+.box-menu h4:before{background: #000;height: .2rem;width: 6rem;position: absolute;left: 0;bottom: 0;content: '';opacity: 0.36;}
+.box-menu a h4{margin-bottom: 0;}
+.side-menu a:hover h4{color: #fff;}
+.box-menu ul{padding: 1rem 0 2rem;}
+.side-menu h5{margin-bottom: 0;color: #333;}
+
+.side-menu::-webkit-scrollbar, .megha-menu::-webkit-scrollbar, .notif-popup::-webkit-scrollbar{width:6px;}
+.side-menu::-webkit-scrollbar-track, .megha-menu::-webkit-scrollbar-track, .notif-popup::-webkit-scrollbar-track{background-color:#FFDE00;border-radius:10px;}
+.side-menu::-webkit-scrollbar-thumb, .megha-menu::-webkit-scrollbar-thumb, .notif-popup::-webkit-scrollbar-thumb{border-radius:10px;background:#000;}
+/*hamberger menu*/
+
+/*Megha Menu*/
+/*Campus*/
+.megha-menu {position: absolute;width: 100%;left: 0;background: #313131;padding:5rem 0 5rem 0;display: flex;flex-wrap: wrap;justify-content: flex-end;display: none;height: 100vh;/*overflow-y: auto;overflow-x: hidden;*/}
+.megha-menu:before{background: #313131;position: absolute;top: -30rem;left: 0;width: 100%;content: '';height: 30rem;z-index: -1;}
+.megha-box {width: 27%;padding: 0 7rem 0 0;}
+.megha-box label{font:bold 1.6rem/2rem 'Open Sans', sans-serif;color:#F5A302;padding: 0 0 1.5rem 0;border-bottom: .1rem solid #ffffff54; margin-bottom: 1.5rem;display:block;}
+.megha-box a{font:1.6rem/2.2rem 'Open Sans', sans-serif;color: #fff;padding: .7rem 0;}
+.megha-inn {margin-bottom: 3rem;}
+.navbar-menu ul .drop-menu:hover .megha-menu, .navbar-menu ul .admission-btn:hover .megha-menu{display: flex;animation:submenu 0.5s ;}
+
+/*Admission*/
+.megha-menu.admission {height: auto;background: #1E1E1E;padding-right: 10rem;}
+.megha-menu.admission:before{background: #1E1E1E;}
+.admission h4{color: #fff;}
+.admi-right {width: 20%;}
+.admi-top{display: flex;padding: 0 0 3rem;border-bottom: .1rem solid #cccccc4f;}
+.admi-left {width: 50%;margin-right: 5%;}
+.admi-top-left, .admi-bottom-left {width: 50%;}
+.admi-top-left strong{color: #FFD35C;font-size: 10.5rem;font-weight: 800;letter-spacing: -5.67px;line-height: 10.5rem;}
+.admi-top-left p{font-size: 2.1rem;color: #fff;font-weight: 300;padding: 1rem 0 3rem;}
+.admi-top-left a{display: inline-block;background: #FFD35C;padding: 1.5rem 2rem;font-size: 1.6rem;text-transform: uppercase;font-weight: 700;border-radius: .5rem;font-family: 'Open Sans', sans-serif;
+letter-spacing: 1.6px;}
+.admi-top-right, .admi-bottom-right {width: 50%;}
+.admi-top-right p{font-family: 'Montserrat', sans-serif;color: #fff;font-size: 4.2rem;line-height: 4.8rem;font-weight: 300;padding: 1rem 0 2rem;}
+.admi-top-right span{font-style: italic;color: #999;font-size: 1.6rem;margin-bottom: 2rem;display: block;}
+.admi-top-right a{display: inline-block;background: #D93E3E;padding: 1.5rem 2rem;font-size: 1.6rem;text-transform: uppercase;font-weight: 700;border-radius: .5rem;font-family: 'Open Sans', sans-serif;
+letter-spacing: 1.6px;color: #fff;}
+.admi-bottom {padding: 3rem 0;display: flex;}
+.admi-bottom span{font-size: 1.6rem;color: #fff;font-weight: bold;display: block;}
+.admi-bottom a{font-size: 2.4rem;color: #fff;font-weight: 300;}
+.admi-bottom a:hover{color: #FCCF14;}
+.navbar-menu .CET-schedule a{border-bottom: .1rem solid #cccccc59;display: flex;justify-content: space-between;align-items: center;font-weight: 700;padding: 1.4rem 2rem;}
+.CET-schedule h4{padding: 0 2rem 2rem;border-bottom: .1rem solid #cccccc59;}
+.CET-schedule ul li:nth-child(1) a{border-bottom: 0;font-weight: 400;font-size: 2.4rem;}
+.CET-schedule ul li:nth-child(2) a{font-weight: 400;font-size: 2.4rem;}
+
+
+
+

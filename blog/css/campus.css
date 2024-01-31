@@ -1,0 +1,276 @@
+.logo-text {
+    font-size: 24px;
+    color: #FFF;
+    width: 270px;transition: 0.5s;
+}
+.logo-home a {
+    display: flex;
+    align-items: center;
+}
+.logo-home {
+    padding: 10px 0px;
+}
+.header.sticky .logo-home {
+    padding: 0px 0px;
+}
+
+.header:after {
+    position: absolute;
+    width: 87%;
+    height: 3px;
+    background: #FFD35C;
+    content: '';
+    right: 0; bottom:0;
+}
+.header:before {
+    position: absolute;
+    width: 13%;
+    height: 3px;
+    background: #D93E3E;
+    content: '';
+    left: 0;
+	bottom:0px;
+}
+section.university-sec.campus_home h1 {
+    color: #000;
+    font-size: 60px;
+    text-align: left;
+    font-weight: 800;
+    padding-right: 5%;
+    line-height: 1.2; position:relative;
+}
+
+section.university-sec.campus_home h1:after {
+    content: '';
+    background: #FFD35C;
+    left: 0;
+    width: 12%;
+    height: 3px;
+    position: absolute;
+    bottom: -30px;
+}
+.fact_campus h2 {
+    font-size: 60px;
+    color: #1D1E4E;
+    margin-bottom: 40px;
+    line-height: 1.1;
+}
+.fact_campus h2 span {
+    font-size: 21px;
+    display: block;
+    color: #000000;
+    font-weight: 500; padding-right: 15px;
+}
+.fact_campus {
+    border: solid 1px #D1D1D1;
+    padding: 50px;
+}
+.list_of_college {
+    margin-top: 50px;
+}
+.list_of_college.collegeleft{margin: 0;}
+.list_of_college.collegeleft .campus_ul, .list_of_college.collegeleft h3{padding-left:0px;}
+.fact_campus h2.red {
+    color: #D93E3E;
+}
+
+.fact_campus h2.orange {
+    color: #F5A302;
+        font-size: 40px;
+}
+.list_of_college h3 {
+   padding: 0 0 30px 60px;
+    font-size: 30px;
+}
+.campus_ul {
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 60px;
+}
+.campus_ul li {
+   width: 50%;
+    list-style: none;
+    padding-bottom: 15px;
+    position: relative;
+    color: #000000;
+    font-weight: 600;
+    margin-bottom: 15px; padding-right: 30px;
+}
+.campus_ul li:after {
+    content: '';
+    width: 8%;
+    height: 1px;
+    background: #b6bcc2;
+    bottom: 0;
+    position: absolute;
+}
+section.happenings-sec.campus_heapening {
+    background: #FFF;     padding: 3rem 0;
+}
+
+.campus_hed {
+    margin-top: 5rem;
+    text-align: left;
+}
+.campus_hed p:first-child {
+    font-size: 24px;
+    line-height: 33px;
+    padding-bottom: 2rem;
+}
+
+.innerpune_city a:hover img { filter: grayscale(1);}
+
+
+
+
+
+.about_pune_city{padding-top: 80px;position: relative;max-width: 1920px;margin:0 auto 55px;overflow: hidden;}
+
+.about_pune_city .col-xl-7, .about_pune_city .col-xl-5{padding: 0;}
+.about_pune_city:after{
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 63%;
+    right: 0;
+    bottom: 0px;
+    background-color: #033C59;
+    z-index: -1;
+    }
+.about_pune_city .col-xl-7 figure{height: 75%;overflow: hidden;}
+.about_pune_city img.pune-featured{
+    height: 100%;
+    object-fit: cover;
+    width: 100%;
+}
+.innerpune_city 
+{
+    padding: 0px 0px 52px 0rem;
+    background: #fff;max-width: 80%;
+margin-left: auto;
+}
+.innerpune_city p
+{
+    padding: 20px 50px 25px 0;
+font-size: 24px;
+line-height: 36px;
+    font-family: 'Montserrat';
+}
+.about_pune_city .col-xl-5{
+display: flex;
+flex-wrap: wrap;
+align-items: flex-end;
+}
+.box-main
+{
+    background-color: #fff;
+    padding:0 55px;
+}
+.innerpune_box_1 {
+    background-color: #D93E3E;
+    position: relative;
+    padding: 60px 40px;
+    line-height: 14px;
+    margin: 10px 0;
+}
+.innerpune_box_1 h2
+{
+        color: #fff;
+    line-height: 34px;
+    font-size: 30px;margin-bottom: 1rem;
+}
+.innerpune_box_1 ul li
+{
+    padding: 15px 0;
+    border-bottom: 1px solid #ffffff69;
+}
+.innerpune_box_1 ul li a
+{
+    color: #fff;
+    font-size: 17px;
+    font-family: 'Open Sans';
+}
+.innerpune_box_1 a.schedule-v{
+    background-color: #FCCF14;
+    display: inline-block;
+    padding: 15px 20px;
+    font-size: 16px;
+    border: 1px solid #707070;
+    margin: 30px 0 0;
+    font-weight: 500;
+}
+.innerpune_box_1 a.schedule-v img
+{
+    margin-left: 1rem;
+    transition: 0.5s;
+}
+.innerpune_box_2
+{
+    position: relative;
+}
+/*.innerpune_box_2 img.img-2
+{
+    padding-bottom: 30px;
+}*/
+.path-icon{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 25rem;
+padding: 53px 0 60px 43px;
+}
+.path-icon h2
+{
+    color: #fff;
+    font-size: 30px;
+    padding-top: 24px;
+}
+
+/*----live chat----*/
+
+body #__eedivChatMain #eeChatContainer #eeChatIndicator .indicator {
+    width: 320px !important;
+    cursor: pointer;
+    position: fixed;
+    bottom: 30px;
+    right: 90px;
+    background-color: white;
+    line-height: 1.6;
+    padding: 25px;
+    padding-bottom: 7px;
+    z-index: 2018;
+    border-radius: 10px 10px 10px 10px;
+    box-shadow: 0 4px 30px 0 rgb(0 0 0 / 5%), 0 6px 20px 0 rgb(0 0 0 / 19%);
+    height: 42px;
+}
+.headerClose .close-icon {
+    width: auto;
+    height: auto;
+    filter: inherit;
+    position: static;
+}
+#__eedivChatMain #__eechatIcon {
+    position: fixed;
+    right: 50px;
+    bottom: 65px!important;
+    z-index: 214483646;
+    }
+body #__eedivChatMain #eeChatContainer #eeChatIndicator .indicator {
+    width: 320px !important;
+    cursor: pointer;
+    position: fixed;
+    bottom: 65px!important;
+    
+}
+
+/*----live chat----*/
+
+
+.address-tab .nav {
+    width: 340px;
+}
+.address-tab v-pills-tabContent {
+    width: 570px;
+}
+ 
+
